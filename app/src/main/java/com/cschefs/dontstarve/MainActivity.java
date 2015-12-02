@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
     /** ListView listIngredients links to list_ingredients. Displays list of ingredients chosen */
     private ListView listIngredients;
     /** ArrayList arrayIngredients allows for storage of ingredients chosen */
-    ArrayList<String> arrayIngredients;
+    public ArrayList<String> arrayIngredients;
+    //Payload key for testing Intents
+    public final static String STRING_PAYLOAD = " StartedByMainActivity";
     /** Other variables needed */
     ArrayAdapter<String> adapter;
     private AlertDialog.Builder dialogBuilder;
@@ -217,6 +219,11 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onContextItemSelected(item);
         }
+    }
+
+    public ArrayList<String> returnIngredients(){
+        return arrayIngredients;
+
     }
 
 }

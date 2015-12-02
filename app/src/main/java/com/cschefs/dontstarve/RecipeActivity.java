@@ -48,6 +48,8 @@ public class RecipeActivity extends AppCompatActivity {
     private ListView listOfRecipes;
     // Request URL for the API
     private String queryString;
+    //Payload key for testing Intents
+    public final static String EXTRAS_PAYLOAD_KEY = " StartedByMainActivity";
     // Hashmap for ListView
     private static ArrayList<HashMap<String, String>> recipeList;
     // JSON Node names
@@ -59,6 +61,7 @@ public class RecipeActivity extends AppCompatActivity {
     static int CONNECTION_TIMEOUT = 10000;
     static int DATARETRIEVAL_TIMEOUT = 10000;
     static int MAX_RECIPES = 30;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
